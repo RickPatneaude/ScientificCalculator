@@ -70,79 +70,82 @@
           <Group type="102" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jbtn7" min="-2" pref="69" max="-2" attributes="0"/>
-                          <Component id="jbtn4" alignment="1" min="-2" pref="69" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jbtn8" min="-2" pref="75" max="-2" attributes="0"/>
-                          <Component id="jbtn5" alignment="0" min="-2" pref="75" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <Component id="jbtn6" min="-2" pref="75" max="-2" attributes="0"/>
+                  <Component id="jTextField1" alignment="1" max="32767" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="jbtnBackspace" min="-2" pref="69" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jbtnMult" min="-2" pref="75" max="-2" attributes="0"/>
+                              <Component id="jbtnClear" min="-2" pref="75" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jbtnSqrt" min="-2" pref="75" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="jbtnPlus" min="-2" pref="75" max="-2" attributes="0"/>
                           </Group>
-                          <Component id="jbtn9" alignment="0" min="-2" pref="75" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-                  <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                      <Component id="jTextField1" alignment="0" max="32767" attributes="0"/>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="jbtn0" min="-2" pref="69" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jbtnDot" min="-2" pref="75" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jbtnPlusMinus" min="-2" pref="75" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jbtn7" min="-2" pref="69" max="-2" attributes="0"/>
+                                  <Component id="jbtn4" alignment="1" min="-2" pref="69" max="-2" attributes="0"/>
                               </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="jbtn1" min="-2" pref="69" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jbtn2" min="-2" pref="75" max="-2" attributes="0"/>
-                                  <EmptySpace max="32767" attributes="0"/>
-                                  <Component id="jbtn3" min="-2" pref="75" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jbtn8" min="-2" pref="75" max="-2" attributes="0"/>
+                                  <Component id="jbtn5" alignment="0" min="-2" pref="75" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Component id="jbtn6" min="-2" pref="75" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="jbtnMult" min="-2" pref="75" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Component id="jbtn9" alignment="0" min="-2" pref="75" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jbtnDiv" min="-2" pref="75" max="-2" attributes="0"/>
-                              <Component id="jbtnMinus" min="-2" pref="75" max="-2" attributes="0"/>
-                              <Component id="jbtnEquals" min="-2" pref="75" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="jbtn0" min="-2" pref="69" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="jbtnDot" min="-2" pref="75" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="jbtnPlusMinus" min="-2" pref="75" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="jbtn1" min="-2" pref="69" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="jbtn2" min="-2" pref="75" max="-2" attributes="0"/>
+                                      <EmptySpace max="32767" attributes="0"/>
+                                      <Component id="jbtn3" min="-2" pref="75" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jbtnDiv" min="-2" pref="75" max="-2" attributes="0"/>
+                                  <Component id="jbtnMinus" min="-2" pref="75" max="-2" attributes="0"/>
+                                  <Component id="jbtnEquals" min="-2" pref="75" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
                       </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="jbtnBackspace" min="-2" pref="69" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jbtnClear" min="-2" pref="75" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jbtnSqrt" min="-2" pref="75" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
-                          <Component id="jbtnPlus" min="-2" pref="75" max="-2" attributes="0"/>
-                      </Group>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jbtn10" alignment="0" min="-2" pref="69" max="-2" attributes="0"/>
-                          <Component id="jbtn13" alignment="1" min="-2" pref="69" max="-2" attributes="0"/>
+                          <Component id="jbtnPi" alignment="0" min="-2" pref="69" max="-2" attributes="0"/>
+                          <Component id="jbtnExp" alignment="1" min="-2" pref="69" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jbtn11" alignment="0" min="-2" pref="75" max="-2" attributes="0"/>
-                          <Component id="jbtn14" alignment="0" min="-2" pref="75" max="-2" attributes="0"/>
+                          <Component id="jbtnCos" alignment="0" min="-2" pref="75" max="-2" attributes="0"/>
+                          <Component id="jbtnTan" alignment="0" min="-2" pref="75" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jbtn15" alignment="0" min="-2" pref="75" max="-2" attributes="0"/>
-                          <Component id="jbtn12" alignment="0" min="-2" pref="75" max="-2" attributes="0"/>
+                          <Component id="jbtnTanh" alignment="0" min="-2" pref="75" max="-2" attributes="0"/>
+                          <Component id="jbtnCosh" alignment="0" min="-2" pref="75" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
@@ -154,22 +157,22 @@
                           <Component id="jbtnPlusMinus1" min="-2" pref="75" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
-                          <Component id="jbtn16" min="-2" pref="69" max="-2" attributes="0"/>
+                          <Component id="jbtnSquare" min="-2" pref="69" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jbtn17" min="-2" pref="75" max="-2" attributes="0"/>
+                          <Component id="jbtnParentheses" min="-2" pref="75" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
                           <Component id="jbtn18" min="-2" pref="75" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <Component id="jbtnBackspace1" min="-2" pref="69" max="-2" attributes="0"/>
+                      <Component id="jbtnLog" min="-2" pref="69" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jbtnClear1" min="-2" pref="75" max="-2" attributes="0"/>
+                      <Component id="jbtnSin" min="-2" pref="75" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jbtnSqrt1" min="-2" pref="75" max="-2" attributes="0"/>
+                      <Component id="jbtnSinh" min="-2" pref="75" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -213,44 +216,48 @@
                           </Group>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jbtn0" alignment="3" min="-2" pref="65" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jbtnEquals" alignment="1" min="-2" pref="65" max="-2" attributes="0"/>
                           <Component id="jbtnPlusMinus" alignment="1" min="-2" pref="65" max="-2" attributes="0"/>
-                          <Component id="jbtnDot" alignment="3" min="-2" pref="65" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jbtn0" alignment="3" min="-2" pref="65" max="-2" attributes="0"/>
+                              <Component id="jbtnDot" alignment="3" min="-2" pref="65" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                   </Group>
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jbtnSqrt1" alignment="3" min="-2" pref="65" max="-2" attributes="0"/>
-                          <Component id="jbtnClear1" alignment="3" min="-2" pref="65" max="-2" attributes="0"/>
-                          <Component id="jbtnBackspace1" alignment="3" min="-2" pref="65" max="-2" attributes="0"/>
+                          <Component id="jbtnSinh" alignment="3" min="-2" pref="65" max="-2" attributes="0"/>
+                          <Component id="jbtnSin" alignment="3" min="-2" pref="65" max="-2" attributes="0"/>
+                          <Component id="jbtnLog" alignment="3" min="-2" pref="65" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jbtn12" alignment="3" min="-2" pref="65" max="-2" attributes="0"/>
-                          <Component id="jbtn11" alignment="3" min="-2" pref="65" max="-2" attributes="0"/>
-                          <Component id="jbtn10" alignment="3" min="-2" pref="65" max="-2" attributes="0"/>
+                          <Component id="jbtnCosh" alignment="3" min="-2" pref="65" max="-2" attributes="0"/>
+                          <Component id="jbtnCos" alignment="3" min="-2" pref="65" max="-2" attributes="0"/>
+                          <Component id="jbtnPi" alignment="3" min="-2" pref="65" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jbtn13" alignment="3" min="-2" pref="65" max="-2" attributes="0"/>
-                          <Component id="jbtn15" alignment="3" min="-2" pref="65" max="-2" attributes="0"/>
-                          <Component id="jbtn14" alignment="3" min="-2" pref="65" max="-2" attributes="0"/>
+                          <Component id="jbtnExp" alignment="3" min="-2" pref="65" max="-2" attributes="0"/>
+                          <Component id="jbtnTanh" alignment="3" min="-2" pref="65" max="-2" attributes="0"/>
+                          <Component id="jbtnTan" alignment="3" min="-2" pref="65" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                              <Component id="jbtn16" alignment="3" min="-2" pref="65" max="-2" attributes="0"/>
-                              <Component id="jbtn17" alignment="3" min="-2" pref="65" max="-2" attributes="0"/>
+                              <Component id="jbtnSquare" alignment="3" min="-2" pref="65" max="-2" attributes="0"/>
+                              <Component id="jbtnParentheses" alignment="3" min="-2" pref="65" max="-2" attributes="0"/>
                           </Group>
                           <Component id="jbtn18" alignment="0" min="-2" pref="65" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jbtn19" alignment="3" min="-2" pref="65" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jbtnPlusMinus1" alignment="1" min="-2" pref="65" max="-2" attributes="0"/>
-                          <Component id="jbtnDot1" alignment="3" min="-2" pref="65" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jbtn19" alignment="3" min="-2" pref="65" max="-2" attributes="0"/>
+                              <Component id="jbtnDot1" alignment="3" min="-2" pref="65" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                   </Group>
               </Group>
@@ -278,6 +285,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="7"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbtn7ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jbtn8">
       <Properties>
@@ -331,6 +341,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="4"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbtn4ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jbtn5">
       <Properties>
@@ -342,6 +355,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="5"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbtn5ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jbtn6">
       <Properties>
@@ -353,6 +369,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="6"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbtn6ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jbtnMult">
       <Properties>
@@ -397,6 +416,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="3"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbtn3ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jbtn2">
       <Properties>
@@ -423,6 +445,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="1"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbtn1ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jbtnPlusMinus">
       <Properties>
@@ -445,6 +470,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="0"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbtn0ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jbtnEquals">
       <Properties>
@@ -524,7 +552,7 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbtnPlusActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="jbtnSqrt1">
+    <Component class="javax.swing.JButton" name="jbtnSinh">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -535,10 +563,10 @@
         <Property name="text" type="java.lang.String" value="Sinh"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbtnSqrt1ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbtnSinhActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="jbtnBackspace1">
+    <Component class="javax.swing.JButton" name="jbtnLog">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -549,7 +577,7 @@
         <Property name="text" type="java.lang.String" value="Log"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="jbtnClear1">
+    <Component class="javax.swing.JButton" name="jbtnSin">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -560,10 +588,10 @@
         <Property name="text" type="java.lang.String" value="Sin"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbtnClear1ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbtnSinActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="jbtn10">
+    <Component class="javax.swing.JButton" name="jbtnPi">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -574,7 +602,7 @@
         <Property name="text" type="java.lang.String" value="&#x3c0;"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="jbtn11">
+    <Component class="javax.swing.JButton" name="jbtnCos">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -582,13 +610,13 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Calibri" size="16" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="8"/>
+        <Property name="text" type="java.lang.String" value="Cos"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbtn11ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbtnCosActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="jbtn12">
+    <Component class="javax.swing.JButton" name="jbtnCosh">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -596,13 +624,13 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Calibri" size="16" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="9"/>
+        <Property name="text" type="java.lang.String" value="Cosh"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbtn12ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbtnCoshActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="jbtn13">
+    <Component class="javax.swing.JButton" name="jbtnExp">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -610,10 +638,10 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Calibri" size="16" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="4"/>
+        <Property name="text" type="java.lang.String" value="x^y"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="jbtn14">
+    <Component class="javax.swing.JButton" name="jbtnTan">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -621,10 +649,10 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Calibri" size="16" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="5"/>
+        <Property name="text" type="java.lang.String" value="Tan"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="jbtn15">
+    <Component class="javax.swing.JButton" name="jbtnTanh">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -632,10 +660,10 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Calibri" size="16" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="6"/>
+        <Property name="text" type="java.lang.String" value="Tanh"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="jbtn16">
+    <Component class="javax.swing.JButton" name="jbtnSquare">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -643,10 +671,10 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Calibri" size="16" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="1"/>
+        <Property name="text" type="java.lang.String" value="x^2"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="jbtn17">
+    <Component class="javax.swing.JButton" name="jbtnParentheses">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -654,11 +682,11 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Calibri" size="16" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="2"/>
+        <Property name="text" type="java.lang.String" value="()"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbtn17ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbtnParenthesesActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jbtn18">
