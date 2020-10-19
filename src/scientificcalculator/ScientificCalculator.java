@@ -11,12 +11,17 @@ package scientificcalculator;
  * 10/10/20
  * @author RickP
  */
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.script.ScriptEngineManager;
+import javax.script.*;
 public class ScientificCalculator extends javax.swing.JFrame {
     double firstNum;
     double secondNum;
     double result;
     String operations;
     private Object math;
+    
     /**
      * Creates new form ScientificCalculatorJFrame
      */
@@ -552,19 +557,31 @@ public class ScientificCalculator extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     private void jbtnMinusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnMinusActionPerformed
-        // TODO add your handling code here:
+        String minus = jTextField1.getText() + " - ";
+        jTextField1.setText(minus);
     }//GEN-LAST:event_jbtnMinusActionPerformed
 
     private void jbtnMultActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnMultActionPerformed
-        // TODO add your handling code here:
+        String mult = jTextField1.getText() + " * ";
+        jTextField1.setText(mult);
     }//GEN-LAST:event_jbtnMultActionPerformed
 
     private void jbtnDivActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDivActionPerformed
-        // TODO add your handling code here:
+        String div = jTextField1.getText() + " / ";
+        jTextField1.setText(div);
     }//GEN-LAST:event_jbtnDivActionPerformed
 
     private void jbtnEqualsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnEqualsActionPerformed
-        // TODO add your handling code here:
+        String res = jTextField1.getText();
+        ScriptEngineManager manager = new ScriptEngineManager();
+        ScriptEngine engine = manager.getEngineByName("js");
+        try {
+            Object answer = engine.eval(res);
+            res = answer.toString();
+            jTextField1.setText(res);
+        } catch (ScriptException ex) {
+            Logger.getLogger(ScientificCalculator.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_jbtnEqualsActionPerformed
 
     private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
@@ -601,7 +618,8 @@ public class ScientificCalculator extends javax.swing.JFrame {
     }//GEN-LAST:event_jbtnSqrtActionPerformed
 
     private void jbtnPlusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnPlusActionPerformed
-        // TODO add your handling code here:
+        String plus = jTextField1.getText() + " + ";
+        jTextField1.setText(plus);
     }//GEN-LAST:event_jbtnPlusActionPerformed
 
     private void jbtnSinhActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnSinhActionPerformed
