@@ -7,20 +7,13 @@ package scientificcalculator;
 
 /**
  *Rick Patneaude
- * CS 480 Lab3 ScientificCalculator.java
- * 10/10/20
- * @author RickP
+ *CS 480 Lab3 ScientificCalculator.java
+ *10/10/20
+ * 
  */
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.script.ScriptEngineManager;
-import javax.script.*;
+
 public class ScientificCalculator extends javax.swing.JFrame {
-    double firstNum;
-    double secondNum;
-    double result;
-    String operations;
-    private Object math;
+
     
     /**
      * Creates new form ScientificCalculatorJFrame
@@ -67,7 +60,7 @@ public class ScientificCalculator extends javax.swing.JFrame {
         jbtnCosh = new javax.swing.JButton();
         jbtnExp = new javax.swing.JButton();
         jbtnTan = new javax.swing.JButton();
-        jbtnTanh = new javax.swing.JButton();
+        jbtnNeg = new javax.swing.JButton();
         jbtnSquare = new javax.swing.JButton();
         jbtnLeftPar = new javax.swing.JButton();
         jbtnRightPar = new javax.swing.JButton();
@@ -334,12 +327,12 @@ public class ScientificCalculator extends javax.swing.JFrame {
             }
         });
 
-        jbtnTanh.setBackground(new java.awt.Color(255, 255, 255));
-        jbtnTanh.setFont(new java.awt.Font("Calibri", 1, 16)); // NOI18N
-        jbtnTanh.setText("Tanh");
-        jbtnTanh.addActionListener(new java.awt.event.ActionListener() {
+        jbtnNeg.setBackground(new java.awt.Color(255, 255, 255));
+        jbtnNeg.setFont(new java.awt.Font("Calibri", 1, 16)); // NOI18N
+        jbtnNeg.setText("Neg");
+        jbtnNeg.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbtnTanhActionPerformed(evt);
+                jbtnNegActionPerformed(evt);
             }
         });
 
@@ -461,7 +454,7 @@ public class ScientificCalculator extends javax.swing.JFrame {
                         .addGap(6, 6, 6)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jbtnCosh, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jbtnTanh, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jbtnNeg, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
@@ -533,7 +526,7 @@ public class ScientificCalculator extends javax.swing.JFrame {
                         .addGap(9, 9, 9)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jbtnExp, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jbtnTanh, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jbtnNeg, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jbtnTan, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -572,15 +565,12 @@ public class ScientificCalculator extends javax.swing.JFrame {
     }//GEN-LAST:event_jbtnDivActionPerformed
 
     private void jbtnEqualsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnEqualsActionPerformed
-        String res = jTextField1.getText();
-        ScriptEngineManager manager = new ScriptEngineManager();
-        ScriptEngine engine = manager.getEngineByName("js");
+        String res = jTextField1.getText();        
         try {
-            Object answer = engine.eval(res);
-            res = answer.toString();
-            jTextField1.setText(res);
-        } catch (ScriptException ex) {
-            Logger.getLogger(ScientificCalculator.class.getName()).log(Level.SEVERE, null, ex);
+            double answer = Calculations.evaluate(res);            
+            jTextField1.setText(String.valueOf(answer));
+        } catch (Exception ex) {
+            jTextField1.setText("error");
         }
     }//GEN-LAST:event_jbtnEqualsActionPerformed
 
@@ -628,7 +618,7 @@ public class ScientificCalculator extends javax.swing.JFrame {
     }//GEN-LAST:event_jbtnSinhActionPerformed
 
     private void jbtnSinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnSinActionPerformed
-        String sin = jTextField1.getText() + " Math.sin(";
+        String sin = jTextField1.getText() + " S(";
         jTextField1.setText(sin);
     }//GEN-LAST:event_jbtnSinActionPerformed
 
@@ -700,10 +690,7 @@ public class ScientificCalculator extends javax.swing.JFrame {
     }//GEN-LAST:event_jbtnRightParActionPerformed
 
     private void jbtnDotActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDotActionPerformed
-        if(!jTextField1.getText().contains("."))
-        {
-            jTextField1.setText(jTextField1.getText() + jbtnDot.getText());
-        }
+        jTextField1.setText(jTextField1.getText() + jbtnDot.getText());        
     }//GEN-LAST:event_jbtnDotActionPerformed
 
     private void jbtnPlusMinusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnPlusMinusActionPerformed
@@ -713,7 +700,7 @@ public class ScientificCalculator extends javax.swing.JFrame {
     }//GEN-LAST:event_jbtnPlusMinusActionPerformed
 
     private void jbtnLogActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnLogActionPerformed
-        String log = jTextField1.getText() + " Math.log(";
+        String log = jTextField1.getText() + " L(";
         jTextField1.setText(log);
     }//GEN-LAST:event_jbtnLogActionPerformed
 
@@ -722,10 +709,10 @@ public class ScientificCalculator extends javax.swing.JFrame {
         jTextField1.setText(tan);
     }//GEN-LAST:event_jbtnTanActionPerformed
 
-    private void jbtnTanhActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnTanhActionPerformed
-        String tanh = jTextField1.getText() + " Math.tanh(";
+    private void jbtnNegActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnNegActionPerformed
+        String tanh = jTextField1.getText() + " -";
         jTextField1.setText(tanh);
-    }//GEN-LAST:event_jbtnTanhActionPerformed
+    }//GEN-LAST:event_jbtnNegActionPerformed
 
     /**
      * @param args the command line arguments
@@ -791,6 +778,7 @@ public class ScientificCalculator extends javax.swing.JFrame {
     private javax.swing.JButton jbtnLog;
     private javax.swing.JButton jbtnMinus;
     private javax.swing.JButton jbtnMult;
+    private javax.swing.JButton jbtnNeg;
     private javax.swing.JButton jbtnPi;
     private javax.swing.JButton jbtnPlus;
     private javax.swing.JButton jbtnPlusMinus;
@@ -800,6 +788,5 @@ public class ScientificCalculator extends javax.swing.JFrame {
     private javax.swing.JButton jbtnSqrt;
     private javax.swing.JButton jbtnSquare;
     private javax.swing.JButton jbtnTan;
-    private javax.swing.JButton jbtnTanh;
     // End of variables declaration//GEN-END:variables
 }
