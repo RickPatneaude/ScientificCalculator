@@ -12,13 +12,10 @@ import java.util.*;
  * @author RickP
  */
 public class Calculations {
-/* A Java program to evaluate a 
-   given expression where tokens 
-   are separated by space. 
-*/
+
 
  
-
+    //separates, then recombines values and operators in order to calculate mathematical expressions
     public static double evaluate(String expression)
     {
         char[] tokens = expression.toCharArray();
@@ -42,43 +39,47 @@ public class Calculations {
             //Log
             if (tokens[i] == 'L')
             {
-                if(tokens[i + 1] == '(')
-                {                    
+                
+                                    
                     StringBuilder exp = new StringBuilder();
-                    i+= 2;
-                    while (tokens[i] != ')')
+                    i++;
+                    int lPar = 0;
+                    int rPar = 0;
+                    while ((lPar == 0 && rPar == 0) || (lPar != rPar))
                    {
-                       exp.append(tokens[i]);
-                       i++;
-                       
+                       exp.append(tokens[i]);                       
+                       if(tokens[i] == '(') lPar++;
+                       if(tokens[i] == ')') rPar++;
+                       if (i < tokens.length) i++;
                    }
-                   if (i < tokens.length) i++;
+                   
                    
                    double lAnswer = Math.log(evaluate(exp.toString()));
                    values.push(lAnswer);
-                   if(i == tokens.length) break;
-                }
+                   if(i == tokens.length) break;                
                                 
             }
             //Sine
             if (tokens[i] == 'S')
             {
-                if(tokens[i + 1] == '(')
-                {                    
+                
+                                    
                     StringBuilder exp = new StringBuilder();
-                    i+= 2;
-                    while (tokens[i] != ')')
+                    i++;
+                    int lPar = 0;
+                    int rPar = 0;
+                    while ((lPar == 0 && rPar == 0) || (lPar != rPar))
                    {
-                       exp.append(tokens[i]);
-                       i++;
-                       
+                       exp.append(tokens[i]);                       
+                       if(tokens[i] == '(') lPar++;
+                       if(tokens[i] == ')') rPar++;
+                       if (i < tokens.length) i++;
                    }
-                   if (i < tokens.length) i++;
                    
-                   double sAnswer = Math.sin(evaluate(exp.toString()));
-                   values.push(sAnswer);
-                   if(i == tokens.length) break;
-                }
+                   
+                   double lAnswer = Math.sin(evaluate(exp.toString()));
+                   values.push(lAnswer);
+                   if(i == tokens.length) break;   
                                 
             }            
             // Current token is a number, 
