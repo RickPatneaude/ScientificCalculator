@@ -54,11 +54,35 @@ public class Calculations {
                    }
                    
                    
+                   double lAnswer = Math.log10(evaluate(exp.toString()));
+                   values.push(lAnswer);
+                   if(i == tokens.length) break;                
+                                
+            }
+            //Log Natural
+            if (tokens[i] == 'l')
+            {
+                
+                                    
+                    StringBuilder exp = new StringBuilder();
+                    i++;
+                    int lPar = 0;
+                    int rPar = 0;
+                    while ((lPar == 0 && rPar == 0) || (lPar != rPar))
+                   {
+                       exp.append(tokens[i]);                       
+                       if(tokens[i] == '(') lPar++;
+                       if(tokens[i] == ')') rPar++;
+                       if (i < tokens.length) i++;
+                   }
+                   
+                   
                    double lAnswer = Math.log(evaluate(exp.toString()));
                    values.push(lAnswer);
                    if(i == tokens.length) break;                
                                 
             }
+            
             //Sine
             if (tokens[i] == 'S')
             {
@@ -81,46 +105,58 @@ public class Calculations {
                    values.push(lAnswer);
                    if(i == tokens.length) break;   
                                 
-            }            
-            // Current token is a number, 
-            // push it to stack for numbers
+            }
+
+            //Tan
+            if (tokens[i] == 'T')
+            {
+                
+                                    
+                    StringBuilder exp = new StringBuilder();
+                    i++;
+                    int lPar = 0;
+                    int rPar = 0;
+                    while ((lPar == 0 && rPar == 0) || (lPar != rPar))
+                   {
+                       exp.append(tokens[i]);                       
+                       if(tokens[i] == '(') lPar++;
+                       if(tokens[i] == ')') rPar++;
+                       if (i < tokens.length) i++;
+                   }
+                   
+                   
+                   double lAnswer = Math.tan(evaluate(exp.toString()));
+                   values.push(lAnswer);
+                   if(i == tokens.length) break;   
+                                
+            }                        
+            
+            //Token is a digit, will be concatenated if more than one digit then pushed onto the values stack
             if ((tokens[i] == '-' && tokens[i + 1] >= '0' && tokens[i + 1] <= '9') || (tokens[i] >= '0' && 
                  tokens[i] <= '9'))
             {
                 StringBuilder sbuf = new
                             StringBuilder();
                  
-                // There may be more than one 
-                // digits in number
+                //digit concatenation
                 while ((i < tokens.length) &&  ((tokens[i] == '-' && tokens[i + 1] >= '0' && tokens[i + 1] <= '9') ||( 
                         tokens[i] >= '0' && 
                           tokens[i] <= '9') || (tokens[i] == '.')) )
                     sbuf.append(tokens[i++]);
-                values.push(Double.parseDouble(sbuf.toString()));
-               
-                // right now the i points to 
-                // the character next to the digit,
-                // since the for loop also increases 
-                // the i, we would skip one 
-                //  token position; we need to 
-                // decrease the value of i by 1 to
-                // correct the offset.
+                values.push(Double.parseDouble(sbuf.toString()));               
                   i--;
             }
  
-            // Current token is an opening brace, 
-            // push it to 'ops'
+            //Opening brace, push to operations stack
             else if (tokens[i] == '(')
                 ops.push(tokens[i]);
  
-            // Closing brace encountered, 
-            // solve entire brace
+            //Closing brace
             else if (tokens[i] == ')')
             {
                 while (ops.peek() != '(')
-                  values.push(applyOp(ops.pop(), values.pop(), values.pop()));
-                ops.pop();
-            }
+                values.push(applyOp(ops.pop(), values.pop(), values.pop()));
+                    ops.pop();            }
  
             // Current token is an operator.
             else if (tokens[i] == '+' || 

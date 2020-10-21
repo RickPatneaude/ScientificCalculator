@@ -140,7 +140,7 @@
                               <Component id="jbtnTan" min="-2" pref="75" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
-                              <Component id="jbtnSqrt" min="-2" pref="69" max="-2" attributes="0"/>
+                              <Component id="jbtnLN" min="-2" pref="69" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="jbtnCos" min="-2" pref="75" max="-2" attributes="0"/>
                           </Group>
@@ -234,7 +234,7 @@
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jbtnCosh" alignment="3" min="-2" pref="65" max="-2" attributes="0"/>
                           <Component id="jbtnCos" alignment="3" min="-2" pref="65" max="-2" attributes="0"/>
-                          <Component id="jbtnSqrt" alignment="3" min="-2" pref="65" max="-2" attributes="0"/>
+                          <Component id="jbtnLN" alignment="3" min="-2" pref="65" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
@@ -519,18 +519,18 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbtnClearActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="jbtnSqrt">
+    <Component class="javax.swing.JButton" name="jbtnLN">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Calibri Light" size="18" style="3"/>
+          <Font name="Calibri" size="18" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="&#x221a;"/>
+        <Property name="text" type="java.lang.String" value="ln"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbtnSqrtActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbtnLNActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jbtnPlus">
