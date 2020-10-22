@@ -5,6 +5,8 @@
  */
 package scientificcalculator;
 
+import java.awt.event.KeyEvent;
+
 /**
  *Rick Patneaude
  *CS 480 Lab3 ScientificCalculator.java
@@ -76,10 +78,20 @@ public class ScientificCalculator extends javax.swing.JFrame {
                 formWindowActivated(evt);
             }
         });
+        addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                formKeyTyped(evt);
+            }
+        });
 
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField1ActionPerformed(evt);
+            }
+        });
+        jTextField1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextField1KeyTyped(evt);
             }
         });
 
@@ -219,6 +231,11 @@ public class ScientificCalculator extends javax.swing.JFrame {
                 jbtnEqualsActionPerformed(evt);
             }
         });
+        jbtnEquals.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jbtnEqualsKeyPressed(evt);
+            }
+        });
 
         jbtnDot.setBackground(new java.awt.Color(255, 255, 255));
         jbtnDot.setFont(new java.awt.Font("Calibri", 1, 16)); // NOI18N
@@ -231,7 +248,7 @@ public class ScientificCalculator extends javax.swing.JFrame {
 
         jbtnBackspace.setBackground(new java.awt.Color(255, 255, 255));
         jbtnBackspace.setFont(new java.awt.Font("Calibri", 1, 16)); // NOI18N
-        jbtnBackspace.setText("←");
+        jbtnBackspace.setText("<<");
         jbtnBackspace.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbtnBackspaceActionPerformed(evt);
@@ -554,7 +571,7 @@ public class ScientificCalculator extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         this.setSize(340, 500);
     }//GEN-LAST:event_jMenuItem1ActionPerformed
@@ -581,6 +598,7 @@ public class ScientificCalculator extends javax.swing.JFrame {
     }//GEN-LAST:event_jbtnDivActionPerformed
 
     private void jbtnEqualsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnEqualsActionPerformed
+        
         String res = jTextField1.getText();        
         try {
             double answer = Calculations.evaluate(res);            
@@ -734,13 +752,56 @@ public class ScientificCalculator extends javax.swing.JFrame {
 
     private void jbtnCotActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnCotActionPerformed
         String coTan = jTextField1.getText() + " c(";
-        jTextField1.setText(coTan);        // TODO add your handling code here:
+        jTextField1.setText(coTan);
     }//GEN-LAST:event_jbtnCotActionPerformed
 
     private void jbtnSquareActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnSquareActionPerformed
-        String exponent = jTextField1.getText() + " x2";
+        String exponent = jTextField1.getText() + " x2(";
         jTextField1.setText(exponent);
     }//GEN-LAST:event_jbtnSquareActionPerformed
+
+    private void jTextField1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField1KeyTyped
+        char c =evt.getKeyChar();
+        char d = c;
+        d ^=32; //c and d will now represent the same key in lower and upper case        
+        if(!Character.isDigit(c) && (c != KeyEvent.VK_C && c != KeyEvent.VK_S && c != KeyEvent.VK_T && c != KeyEvent.VK_L  &&
+                d != KeyEvent.VK_C && d != KeyEvent.VK_L && d != KeyEvent.VK_X && c != ')' && c != '(' && c != '+'
+                && c != '-' && c != '*' && c != '/' && c != '^' && c != KeyEvent.VK_BACK_SPACE && c != KeyEvent.VK_DELETE))
+        {
+            getToolkit().beep();
+            evt.consume();
+        }
+        if(evt.getKeyChar() == '=')
+        {
+                    
+        String res = jTextField1.getText();        
+        try {
+            double answer = Calculations.evaluate(res);            
+            jTextField1.setText(String.valueOf(answer));
+        } catch (Exception ex) {
+            jTextField1.setText("error");
+        }
+        }
+        
+    }//GEN-LAST:event_jTextField1KeyTyped
+
+    private void jbtnEqualsKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jbtnEqualsKeyPressed
+
+         
+    }//GEN-LAST:event_jbtnEqualsKeyPressed
+
+    private void formKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_formKeyTyped
+     if(evt.getKeyChar() == '=')           
+        {
+            String res = jTextField1.getText();        
+            try {
+                double answer = Calculations.evaluate(res);            
+                jTextField1.setText(String.valueOf(answer));
+            } catch (Exception ex) {
+                jTextField1.setText("error");
+            }
+        }        // TODO add your handling code here:
+    }//GEN-LAST:event_formKeyTyped
 
     /**
      * @param args the command line arguments

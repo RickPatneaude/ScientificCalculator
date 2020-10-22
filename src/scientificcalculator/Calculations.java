@@ -8,8 +8,9 @@ package scientificcalculator;
 import java.util.*;
 
 /**
- *
- * @author RickP
+ *Rick Patneaude
+ * CS 480 Lab3 Calculations.java
+ * 10/19/2020
  */
 public class Calculations {
 
