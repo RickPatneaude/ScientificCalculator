@@ -130,6 +130,80 @@ public class Calculations {
                    if(i == tokens.length) break;   
                                 
             }                        
+
+            //Cosine
+            if (tokens[i] == 'C')
+            {
+                
+                                    
+                    StringBuilder exp = new StringBuilder();
+                    i++;
+                    int lPar = 0;
+                    int rPar = 0;
+                    while ((lPar == 0 && rPar == 0) || (lPar != rPar))
+                   {
+                       exp.append(tokens[i]);                       
+                       if(tokens[i] == '(') lPar++;
+                       if(tokens[i] == ')') rPar++;
+                       if (i < tokens.length) i++;
+                   }
+                   
+                   
+                   double lAnswer = Math.cos(evaluate(exp.toString()));
+                   values.push(lAnswer);
+                   if(i == tokens.length) break;   
+                                
+            }
+            
+            //Cotangent
+            if (tokens[i] == 'c')
+            {
+                
+                                    
+                    StringBuilder exp = new StringBuilder();
+                    i++;
+                    int lPar = 0;
+                    int rPar = 0;
+                    while ((lPar == 0 && rPar == 0) || (lPar != rPar))
+                   {
+                       exp.append(tokens[i]);                       
+                       if(tokens[i] == '(') lPar++;
+                       if(tokens[i] == ')') rPar++;
+                       if (i < tokens.length) i++;
+                   }
+                   
+                   
+                   double lAnswer = (1/Math.tan(evaluate(exp.toString())));
+                   values.push(lAnswer);
+                   if(i == tokens.length) break;   
+                                
+            }
+            
+            //exponent logic is done here
+            if (tokens[i] == 'x')
+            {
+                
+                                    
+                    StringBuilder exp = new StringBuilder();
+                    i++;
+                    int power = Integer.parseInt(String.valueOf(tokens[i]));                    
+                    i++;
+                    int lPar = 0;
+                    int rPar = 0;
+                    while ((lPar == 0 && rPar == 0) || (lPar != rPar))
+                   {
+                       exp.append(tokens[i]);                       
+                       if(tokens[i] == '(') lPar++;
+                       if(tokens[i] == ')') rPar++;
+                       if (i < tokens.length) i++;
+                   }
+                   
+                   
+                   double lAnswer = Math.pow(evaluate(exp.toString()), power);
+                   values.push(lAnswer);
+                   if(i == tokens.length) break;   
+                                
+            }            
             
             //Token is a digit, will be concatenated if more than one digit then pushed onto the values stack
             if ((tokens[i] == '-' && tokens[i + 1] >= '0' && tokens[i + 1] <= '9') || (tokens[i] >= '0' && 
